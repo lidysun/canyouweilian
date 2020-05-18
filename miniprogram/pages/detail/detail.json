@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "残友微恋 - 查看资料",
+  "usingComponents": {
+    "mp-dialog": "/miniprogram_npm/weui-miniprogram/dialog/dialog",
+    "mp-gallery": "/miniprogram_npm/weui-miniprogram/gallery/gallery"
+  }
+}

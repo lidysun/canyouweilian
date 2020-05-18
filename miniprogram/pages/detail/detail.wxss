@@ -1,0 +1,8 @@
+/* miniprogram/pages/detail/detail.wxss */
+.user-picture-wrap{position:relative;z-index:1;margin:0 16rpx;}
+.user-picture{width:100%;vertical-align:top;margin-bottom:16rpx;}
+.user-info{padding:16rpx;font-size:28rpx;line-height:40rpx;}
+.info{margin-top:15rpx;display:flex;flex-direction:row;}
+.key{width:200rpx;text-align:right;color:#666;}
+.val{flex:1;}
+.val-name{text-align:center;}

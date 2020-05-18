@@ -1,0 +1,5 @@
+<!--miniprogram/pages/rules/rules.wxml-->
+<mp-rules title="{{title}}"></mp-rules>
+<view class="form-btn-wrap">
+  <button class="weui-btn" type="primary" bindtap="readedRules" disabled="{{disabled}}">我已认真阅读并同意以上所有条款<text hidden="{{count<1}}">({{count}}s)</text> </button>
+</view>

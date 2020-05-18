@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<mp-loading wx:if="{{isLoading}}" type="circle" show="{{isLoading}}" animated></mp-loading>
+<view wx:else class="user-list">
+  <view class="user-item" wx:for="{{users}}" wx:key="_id" id="{{item._id}}" bindtap="gotoDetail">
+    <view class="user-picture-wrap">
+      <mp-icon wx:if="{{item.pictures.length>1}}" extClass="icon-pictures" color="#fff" size="15" icon="photo-wall"></mp-icon>
+      <image class="user-picture" mode="aspectFill" src="{{item.pictures[0]}}"></image>
+    </view>
+    <view class="flex user-info user-{{item.sex=='1' ? 'boy':'girl'}}">
+      <view class="flex-item user-name">{{item.name}} / {{sexRange[item.sex]}} / {{year - item.year}}</view>
+      <view class="flex-item user-disability">{{disabilityRange[0][item.disability[0]]}}</view>
+      <view class="flex-item user-address">{{item.address_now[0]}}</view>
+    </view>
+  </view>
+  <view wx:if="{{users.length}}" class="page-footer">已经到底啦</view>
+</view>
+<view class="no-data" wx:if="{{usersNone}}">暂无数据</view>
+<view class="btn-add" bindtap="gotoAdd">
+  <view>立即</view>
+  <view>报名</view>
+</view>

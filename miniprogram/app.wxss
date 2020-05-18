@@ -1,0 +1,28 @@
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+/* common */
+.ellipsis{white-space:nowrap;overflow:hidden;text-overflow: ellipsis;}
+.form-btn-wrap{padding:50rpx;}
+.page-footer,
+.no-data{padding:50rpx;color:#999;font-size:28rpx;text-align:center;}
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/**app.wxss**/
+.flex {
+  display: flex;
+  flex-direction: row;
+  text-justify: center;
+  align-items: center;
+  box-sizing: border-box;
+} 
+flex-column{
+  flex-direction: column;
+}
+.flex-item{
+  flex:1;
+  text-align:center;
+}

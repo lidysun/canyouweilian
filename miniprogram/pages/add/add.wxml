@@ -1,0 +1,145 @@
+<!--miniprogram/pages/add/add.wxml-->
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<mp-form models="{{formData}}">
+  <mp-cells ext-class="my-cells" title="基本信息 (*为必填)">
+      <!-- 姓名 -->
+      <mp-cell title="*姓名" prop="name">
+        <input bindinput="formInputChange" data-field="name" class="weui-input" placeholder="请输入姓名"></input>
+      </mp-cell>
+      <!-- 性别 -->
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd">
+          <view class="weui-label">*性别</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker id="prop_sex" bindchange="formPickerChange" value="{{sexRange[formData.sex]}}" range="{{sexRange}}">
+            <view class="weui-select weui-select_in-select-after">{{sexRange[formData.sex]}}</view>
+          </picker>
+        </view>
+      </view>
+      <!-- 出生日期 -->
+      <mp-cell title="*出生日期" prop="birthday">
+        <picker id="prop_birthday" bindchange="formPickerChange" data-field="birthday" value="{{formData.birthday}}" mode="date" start="1920-01-01" end="2050-01-01">
+          <view class="weui-input">{{formData.birthday}}</view>
+        </picker>
+      </mp-cell>
+      <!-- 残障状况 -->
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd">
+          <view class="weui-label">*残障状况</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker id="prop_disability" mode="multiSelector" bindchange="formPickerChange" bindcolumnchange="" value="{{formData.disability}}" range="{{disabilityRange}}">
+            <view class="weui-select weui-select_in-select-after">
+              {{disabilityRange[0][formData.disability[0]]}}，{{disabilityRange[1][formData.disability[1]]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <!-- 籍贯 -->
+      <mp-cell title="*籍贯" prop="address_origin">
+        <picker id="prop_address_origin" bindchange="formPickerChange" data-field="address_origin" value="{{formData.address_origin}}" mode="region">
+          <view class="picker">{{formData.address_origin}}</view>
+        </picker>
+      </mp-cell>
+      <!-- 现居住地 -->
+      <mp-cell title="*现居住地" prop="address_now">
+        <picker id="prop_address_now" bindchange="formPickerChange" data-field="address_now" value="{{formData.address_now}}" mode="region">
+          <view class="picker">{{formData.address_now}}</view>
+        </picker>
+      </mp-cell>
+      <!-- 身高 -->
+      <mp-cell title="身高(cm)" prop="high">
+        <input bindinput="formInputChange" data-field="high" class="weui-input" placeholder="请输入身高" type="number" maxlength="3"></input>
+      </mp-cell>
+      <!-- 体重 -->
+      <mp-cell title="体重(kg)" prop="weight">
+        <input bindinput="formInputChange" data-field="weight" class="weui-input" placeholder="请输入体重" type="number" maxlength="3"></input>
+      </mp-cell>
+      <!-- 学历 -->
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd">
+          <view class="weui-label">*学历</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker id="prop_education" bindchange="formPickerChange" value="{{sexRange[formData.education]}}" range="{{educationRange}}">
+            <view class="weui-select weui-select_in-select-after">{{educationRange[formData.education]}}</view>
+          </picker>
+        </view>
+      </view>
+      <!-- 工作 -->
+      <mp-cell title="工作职位" prop="work">
+        <input bindinput="formInputChange" data-field="work" class="weui-input" placeholder="请输入工作职位" maxlength="20"></input>
+      </mp-cell>
+      <!-- 月收入 -->
+      <mp-cell title="月收入(元)" prop="salary">
+        <input bindinput="formInputChange" data-field="salary" class="weui-input" placeholder="请输入月收入" type="number" maxlength="8"></input>
+      </mp-cell>
+      <!-- 住房状况 -->
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd">
+          <view class="weui-label">*住房状况</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker id="prop_housing" bindchange="formPickerChange" value="{{housingRange[formData.housing]}}" range="{{housingRange}}">
+            <view class="weui-select weui-select_in-select-after">{{housingRange[formData.housing]}}</view>
+          </picker>
+        </view>
+      </view>
+      <!-- 车辆状况 -->
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd">
+          <view class="weui-label">*车辆状况</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker id="prop_car" bindchange="formPickerChange" value="{{carRange[formData.car]}}" range="{{carRange}}">
+            <view class="weui-select weui-select_in-select-after">{{carRange[formData.car]}}</view>
+          </picker>
+        </view>
+      </view>
+      <!-- 婚姻状况 -->
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd">
+          <view class="weui-label">*婚姻状况</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker id="prop_marital" bindchange="formPickerChange" value="{{maritalRange[formData.marital]}}" range="{{maritalRange}}">
+            <view class="weui-select weui-select_in-select-after">{{maritalRange[formData.marital]}}</view>
+          </picker>
+        </view>
+      </view>
+      <!-- 联系方式 -->
+      <mp-cell title="*联系方式" prop="contact">
+        <input bindinput="formInputChange" data-field="contact" class="weui-input" placeholder="电话/微信/QQ/邮箱等" maxlength="100"></input>
+      </mp-cell>
+  </mp-cells>
+  <!-- 择偶要求 -->
+  <mp-cells ext-class="my-cells" title="自我简介及期望要求">
+    <view class="weui-cell">
+        <view class="weui-cell__bd">
+            <textarea bindinput="formInputChange" data-field="hope" class="weui-textarea" placeholder="请输入" maxlength="{{hopeMax}}" auto-height />
+            <view class="weui-textarea-counter">{{hopeCount}}/{{hopeMax}}</view>
+        </view>
+    </view>
+  </mp-cells>
+  <!-- 照片 -->
+  <mp-cells ext-class="my-cells" title="个人照片({{formData.pictures.length}}/{{maxPictureCount}})">
+    <mp-cell ext-class="user-picture-wrap" wx:if="{{formData.pictures.length}}">
+      <image class="user-picture" wx:for="{{formData.pictures}}" wx:key="index" mode="{{item.mode}}" src="{{item}}" mode="aspectFit"></image>
+    </mp-cell>
+    <mp-cell ext-class="user-upload-btn" wx:if="{{formData.pictures.length < maxPictureCount}}">
+      <view class="weui-uploader">
+        <view class="weui-uploader__input-box">
+          <view bindtap="chooseImage" class="weui-uploader__input"></view>
+        </view>
+      </view>
+    </mp-cell>
+  </mp-cells>
+  <!-- 提交按钮 -->
+  <mp-cells>
+    <view class="form-btn-wrap">
+        <button class="weui-btn" type="primary" bindtap="formSubmit">提交报名</button>
+    </view>
+  </mp-cells>
+
+</mp-form>

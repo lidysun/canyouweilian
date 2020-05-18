@@ -1,0 +1,81 @@
+<!--components/rules/rules.wxml-->
+<view class="page-rules">
+  <view class="rules-title">《残友微恋服务协议》</view>
+  <view class="rules-block">
+    <view class="rules-item">
+      在使用"残友微恋"微信小程序及服务之前，您应当阅读并遵守本小程序服务协议。请您务必审慎阅读并充分理解各条款内容，特别是免除或者限制责任的条款。除非您已阅读并接受本协议所有条款，否则你无权使用本小程序及相关服务。若您是18岁以下的未成年人，请勿提供或发布任何个人相关信息。
+    </view>
+  </view>
+  <view class="rules-block">
+    <view class="rules-item rules-item-title">1.权利声明</view>
+    <view class="rules-item rules-item-detail">
+      本小程序一切的知识产权以及本小程序所有信息内容包括但不限于：文字表述及组合、图片、电子文档等禁止私自转发或者商用，本小程序所有信息受知识产权法律法规的保护。
+    </view>
+  </view>
+  <view class="rules-block">
+    <view class="rules-item rules-item-title">2.许可范围：</view>
+    <view class="rules-item rules-item-detail">
+       允许全国残障人通过本小程序发布相亲交友信息。
+    </view>
+  </view>
+  <view class="rules-block">
+    <view class="rules-title rules-item-title">3.权利义务：</view>
+    <view class="rules-item rules-item-detail">
+      权利：使用本小程序发布交友征婚信息可自行提交本人的基本信息以及相关图片文件；有权向本小程序负责人(邮箱820262236@qq.com)申请对已发布的交友征婚信息进行更改或者删除。
+    </view>
+    <view class="rules-item rules-item-detail">
+        义务：保证提交的个人信息资料真实可靠包括但不限于：本人基本资料介绍、照片等；禁止盗用他人信息或照片。
+    </view>
+  </view>
+  <view class="rules-block">
+    <view class="rules-title rules-item-title">4.其他事项：</view>
+    <view class="rules-item rules-item-detail">
+      （1）交友征婚需慎重，本小程序旨在为残障群体提供交友征婚服务非该业务服务请谨慎对待，如：索要联系方式进行诈骗、借贷等需警惕；
+    </view>
+    <view class="rules-item rules-item-detail">
+      （2）千万不要以任何方式或名义给对方转账汇款；
+    </view>
+    <view class="rules-item rules-item-detail">
+      （3）不要以任何方式或名义接受对方的转账汇款（防止诈骗）；
+    </view>
+    <view class="rules-item rules-item-detail">
+      （4）如遇对方骚扰或者非法行为包括但不限于：言语侮辱、言语暴力、恐吓等非法行为可通过微信举报，情节严重可报警处理。
+    </view>
+  </view>
+  <view class="rules-block">
+    <view class="rules-title rules-item-title">5.免责申明：</view>
+    <view class="rules-item rules-item-detail">
+      （1） 提交、发布虚假信息，或冒充利用他人名义的；
+    </view>
+    <view class="rules-item rules-item-detail">
+      （2）诱导他人分享信息的；
+    </view>
+    <view class="rules-item rules-item-detail">
+      （3）虚构事实、慌报个人资料、隐瞒真相以误导欺骗他人的：
+    </view>
+    <view class="rules-item rules-item-detail">
+      （4）侵害他人名誉权、肖像权的；
+    </view>
+    <view class="rules-item rules-item-detail">
+      （5）因个人交友不慎自身利益被侵害的；
+    </view>
+    <view class="rules-item rules-item-detail">
+      （6）因不可抗力因素影响导致本小程序信息泄漏的；若发生包括但不限于以上情况的，本公众号一律不承担任何相关的法律责任，一切法律责任由当事人自行承担。
+    </view>
+  </view>
+  <view class="rules-block">
+    <view class="rules-title rules-item-title">6.服务规范：</view>
+    <view class="rules-item rules-item-detail">
+      （1）如何报名：微信内搜索"残友微恋"并进入首页，点击悬浮"立即报名"按钮填写并提交表单即可；
+    </view>
+    <view class="rules-item rules-item-detail">
+      （2）本小程序内报名相亲交友不收取任何费用；
+    </view>
+    <view class="rules-item rules-item-detail">
+      （3）成功提交后交友征婚信息数据会存入腾讯云：本小程序有权对所有提交的信息进行审核、删除。
+    </view>
+  </view>
+    <view class="rules-block">
+    <view class="rules-title rules-item-title">以上为"残友微恋"小程序的使用注意事项，最终解释权归本小程序所有。</view>
+  </view>
+</view>

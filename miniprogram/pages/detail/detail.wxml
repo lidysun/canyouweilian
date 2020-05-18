@@ -1,0 +1,75 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+<mp-gallery show="{{showPreviewImage}}" img-urls="{{pictures}}" hide-on-click="{{true}}" showDelete="{{false}}" current="{{viewIndex}}"></mp-gallery>
+<mp-loading wx:if="{{isLoading}}" type="circle" show="{{isLoading}}" animated></mp-loading>
+<view wx:else class="user-item">
+  <view class="user-picture-wrap">
+    <view class="user-picture-item" wx:for="{{pictures}}" wx:key="index" id="picture_{{index}}" bindtap="vewImg">
+      <image class="user-picture" mode="widthFix" src="{{item}}"></image>
+    </view>
+  </view>
+  <view class="user-info user-{{sex ? 'boy':'girl'}}">
+    <view class="info user-name">
+      <view class="key">基本信息：</view>
+      <view class="val">{{name}} / {{sexRange[sex]}} / {{yearCurr - year}}岁</view>
+    </view>
+    <view class="info user-disability">
+      <view class="key">残障状况：</view>
+      <view class="val">{{disabilityRange[0][disability[0]]}} {{disabilityRange[1][disability[1]]}}</view>
+    </view>
+    <view class="info user-address_origin">
+      <view class="key">籍贯：</view>
+      <view class="val">{{address_origin[0]}} {{address_origin[1]}} {{address_origin[2]}}</view>
+    </view>
+    <view class="info user-address_now">
+      <view class="key">现居住地：</view>
+      <view class="val">{{address_now[0]}} {{address_now[1]}} {{address_now[2]}}</view>
+    </view>
+    <view class="info user-high" wx:if="{{high}}">
+      <view class="key">身高：</view>
+      <view class="val">{{high}}cm</view>
+    </view>
+    <view class="info user-weight" wx:if="{{weight}}">
+      <view class="key">体重：</view>
+      <view class="val">{{weight}}kg</view>
+    </view>
+    <view class="info user-education">
+      <view class="key">学历：</view>
+      <view class="val">{{educationRange[education]}}</view>
+    </view>
+    <view class="info user-work" wx:if="{{work}}">
+      <view class="key">工作职位：</view>
+      <view class="val">{{work}}</view>
+    </view>
+    <view class="info user-salary" wx:if="{{salary}}">
+      <view class="key">月收入：</view>
+      <view class="val">{{salary}}</view>
+    </view>
+    <view class="info user-housing">
+      <view class="key">住房状况：</view>
+      <view class="val">{{housingRange[housing]}}</view>
+    </view>
+    <view class="info user-car">
+      <view class="key">车辆状况：</view>
+      <view class="val">{{carRange[car]}}</view>
+    </view>
+    <view class="info user-marital">
+      <view class="key">婚姻状况：</view>
+      <view class="val">{{maritalRange[marital]}}</view>
+    </view>
+    <!-- <view class="info user-contact">
+      <view class="key">联系方式：</view>
+      <view class="val">{{contact}}</view>
+    </view> -->
+    <view class="info user-hope">
+      <view class="key">择偶要求：</view>
+      <view class="val">{{hope}}</view>
+    </view>
+  </view>
+  <view class="form-btn-wrap">
+    <button class="weui-btn" type="primary" bindtap="getUserContact">查看联系方式</button>
+  </view>
+</view>
+<mp-dialog title="{{name}} / {{sexRange[sex]}} / {{yearCurr - year}}岁" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{dialogBtns}}">
+    <view>{{contact}}</view>
+</mp-dialog>
+
